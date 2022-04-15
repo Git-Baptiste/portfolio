@@ -1,0 +1,45 @@
+%titre-section {
+      font-family: Quicksand, sans-serif;
+      text-align: center;
+      font-size: 70px;
+      padding: 0 25px 20px;
+}
+@media screen and (max-width: 1100px) {
+      %titre-global {
+            font-size: 60px;
+      }
+}
+@media screen and (max-width: 850px) {
+      %titre-global {
+            font-size: 50px;
+      }
+}
+@media screen and (max-width: 600px) {
+      %titre-global {
+            font-size: 35px;
+            padding: 10px 5px;
+      }
+}
+
+%flex-double-centre {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+
+// DESIGN DES LIEN CTA
+
+%lien-github {
+      @extend %flex-double-centre;
+      justify-content: space-evenly;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      margin-right: 20px;
+      padding: 15px;
+      border-radius: 15px;
+      color: #fff;
+      background: linear-gradient(45deg, $violet, $orange);
+}
