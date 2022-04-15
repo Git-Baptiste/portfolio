@@ -1,4 +1,4 @@
-nav ul, .lien-github {
+.presentation, nav ul, .lien-github {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,8 +108,9 @@ nav li a:hover::after {
   }
 
   nav ul {
+    z-index: 100;
     width: 100%;
-    background: #fff;
+    background: rgb(255, 255, 255);
     flex-direction: column;
     border-bottom: 1px solid #222;
     display: none;
@@ -138,6 +139,78 @@ nav li a:hover::after {
 
   .active-nav {
     display: flex;
+  }
+}
+.presentation {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  justify-content: space-evenly;
+}
+
+.presentation-txt {
+  width: 60%;
+  max-width: 800px;
+  margin: 20px auto 50px;
+  text-justify: distribute;
+  font-size: 22px;
+}
+
+.titre-section {
+  margin: 40px auto;
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  font-size: 45px;
+}
+
+.presentation-txt p {
+  margin: 10px 0;
+  line-height: 25px;
+}
+
+.presentation-img {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.presentation-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 950px) {
+  .presentation {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: auto;
+    height: auto;
+  }
+
+  .presentation-txt {
+    width: 80%;
+  }
+
+  .presentation-img {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .presentation-txt {
+    font-size: 20px;
+  }
+
+  .titre-section {
+    font-size: 35px;
+  }
+
+  .presentation-img {
+    width: 250px;
+    height: 250px;
   }
 }
 
