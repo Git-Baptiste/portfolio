@@ -1,7 +1,6 @@
 body {
       font-family: Arial, Helvetica, sans-serif;
-      position: relative;
-      min-height: 100vh;
+      transition: all 0.2s ease-in-out;
 }
 
 
@@ -15,7 +14,9 @@ nav {
       align-items: center;
       justify-content: space-between;
       font-family: Quicksand, Arial, Helvetica, sans-serif;
-      background: #fff;
+      background: transparent;
+      position: absolute;
+      color: $blanc;
 }
 .logo-nav {
       font-size: 30px;
@@ -30,7 +31,7 @@ nav li {
 }
 nav a {
       text-decoration: none;
-      color: #222;
+      color: $blanc;
       font-size: 25px;
 }
 nav li a::after {
@@ -40,7 +41,7 @@ nav li a::after {
       height: 1px;
       position: relative;
       top: 5px;
-      background: #222;
+      background: #fff;
       transform: scale(0);
       transition: transform 0.2s ease-in-out;
 }
@@ -54,7 +55,7 @@ nav li a:hover::after {
 }
 
 .lien-github img {
-      color: #fff;
+      color: $blanc;
 }
 //  Animation du bouton au survol: changement de couleur
 
@@ -92,7 +93,7 @@ nav li a:hover::after {
       nav ul {
             z-index: 100;
             width: 100%;
-            background: rgb(255, 255, 255);
+            background: $blanc;
             flex-direction: column;
             border-bottom: 1px solid #222;
             display: none;
@@ -119,23 +120,36 @@ nav li a:hover::after {
       }
 }
 
+// ------------------ BACKGROUND SUR LE CONTAINER GLOBAL------------------
 
 
+// .container-global{
+//       background-image: url(/ressources/layered-peaks.svg);
+//       background-size: auto 100vh;
+//       background-repeat: no-repeat;
+// }
 // ------------------ SECTION PRESENTATION ------------------
 
 
 .presentation {
+      background-image: url(/ressources/layered-peaks.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
       width: 100%;
       height: 100vh;
+      margin: 0 auto;
       @extend %flex-double-centre;
 }
 
 .presentation-txt {
+      color: $blanc;
       width: 60%;
       max-width: 800px;
       margin: 20px auto 50px;
       text-justify: distribute;
-      font-size: 22px;
+      font-size: 24px;
+      text-shadow: 2px 2px 5px #222;
+      font-family: Quicksand, Arial, Helvetica, sans-serif;
 }
 
 
@@ -148,12 +162,16 @@ nav li a:hover::after {
 .presentation-txt p {
       margin: 10px 0;
       line-height: 25px;
+      font-weight: 100;
 }
 
 .presentation-img {
-      width: 350px;
-      height: 350px;
+      max-width: 350px;
+      height: 500px;
       margin: 0 auto;
+      overflow: hidden;
+      box-shadow: 2px 2px 20px rgba(41, 41, 41, 0.845);
+      border-radius: 5px;
 }
 
 .presentation-img img {
@@ -182,23 +200,23 @@ nav li a:hover::after {
       }
       .presentation-img {
             width: 300px;
-            height: 300px;
+            height: 450px;
       }
 }
 
 @media screen and (max-width: 450px) {
       
+      .titre-section {
+            font-size: 40px;
+      }
+
       .presentation-txt {
             font-size: 20px;
       }
 
-      .titre-section {
-            font-size: 35px;
-      }
-      
       .presentation-img {
             width: 250px;
-            height: 250px;
+            height: 370px;
       }
 }
 
@@ -246,13 +264,14 @@ nav li a:hover::after {
 
 .img-carte {
       width: 100%;
+      min-width: 300px;
       height: auto;
       position: relative;
 }
 
 .img-carte img {
       width: 100%;
-      max-height: 250px;
+      height: 250px;
       object-fit: cover;
 }
 
@@ -299,4 +318,32 @@ nav li a:hover::after {
 
 .lien-projet img {
       margin-right: 10px;
+}
+
+// Responsive de la setion portfolio
+
+@media screen and (max-width: 950px) {
+
+}
+
+
+@media screen and (max-width: 600px) {
+      .portfolio h2 img {
+            display: none;
+      }
+}
+
+@media screen and (max-width: 450px) {
+      .portfolio {
+            width: 100%;
+      }
+      .portfolio h2 {
+            font-size: 40px;
+      }
+      .container-carte {
+            padding-top: 30px;
+      }
+      .img-carte img {
+            height: 200px;
+      }
 }
