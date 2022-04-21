@@ -31,3 +31,34 @@ btnNav.addEventListener('click', () => {
       }
 
 })
+
+// Navbar visible au scroll vers le haut
+
+const nav = document.querySelector('nav');
+let currentYPos = 0;
+let lastYpos = 0;
+
+window.addEventListener('scroll', () => {
+      currentYPos = document.documentElement.scrollTop;
+      // console.log(currentYPos - lastYpos);
+      if (document.documentElement.scrollTop > 70 && currentYPos - lastYpos < 0){
+            nav.classList.add('active');  
+
+      } else {
+            nav.classList.remove('active');
+      }
+      lastYpos = currentYPos;
+      listeNav.classList.remove('active-nav');
+      imgBtn.src = './ressources/menu.svg';
+      imgBtn.style.width = "40px";
+      imgBtn.style.height = "40px";
+})
+
+
+
+
+// function activeOnScroll() {
+//       if (document.documentElement.scrollTop > 70) {
+//             nav.classList.toggle('active');
+//       }
+// }

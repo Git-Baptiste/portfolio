@@ -43,3 +43,22 @@
       color: #fff;
       background: linear-gradient(45deg, $violet, $orange);
 }
+
+// Design de la navbar à fond blanc pour le scroll
+
+%white-navbar {
+      position: fixed;
+      z-index: 1000;
+      background: #fff;
+      color: $violet;
+      a {
+            color: $violet;
+      }
+      a::after {
+            background: $violet;
+      }
+      .lien-github {
+            color: $blanc;
+      }
+      border-bottom: 1px solid $blanc;
+}

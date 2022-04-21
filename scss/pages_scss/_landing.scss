@@ -8,16 +8,17 @@ body {
 // NAVIGATION
 
 nav {
-      width: 100%;
-      height: 70px;
+      position: absolute;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      width: 100%;
+      height: 70px;
       font-family: Quicksand, Arial, Helvetica, sans-serif;
       background: transparent;
-      position: absolute;
       color: $blanc;
 }
+
 .logo-nav {
       font-size: 30px;
       padding-left: 20px;
@@ -41,7 +42,7 @@ nav li a::after {
       height: 1px;
       position: relative;
       top: 5px;
-      background: #fff;
+      background: $blanc;
       transform: scale(0);
       transition: transform 0.2s ease-in-out;
 }
@@ -62,6 +63,10 @@ nav li a:hover::after {
 .lien-github:hover {
       background: linear-gradient(45deg, $violet, $jaune);
 
+}
+
+.active {
+      @extend %white-navbar;
 }
 
 
@@ -88,14 +93,14 @@ nav li a:hover::after {
             height: auto;
             position: absolute;
             top: -5px;
-            border-bottom: 1px solid #222;
+            background: #fff;
+            color: $violet;
       }
       nav ul {
             z-index: 100;
             width: 100%;
-            background: $blanc;
+            background: #fff;
             flex-direction: column;
-            border-bottom: 1px solid #222;
             display: none;
       }
       .logo-nav {
@@ -109,8 +114,12 @@ nav li a:hover::after {
             height: 70px;
             line-height: 70px;
       }
+      nav ul li a {
+            color: $violet;
+      }
       nav li a::after{
             top: -20px;
+            background: $violet;
       }
       .lien-github {
             display: none;
@@ -120,7 +129,7 @@ nav li a:hover::after {
       }
 }
 
-// ------------------ BACKGROUND SUR LE CONTAINER GLOBAL------------------
+// ------------------ BACKGROUND SUR 100vh ------------------
 
 
 // .container-global{
