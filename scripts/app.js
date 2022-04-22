@@ -56,19 +56,29 @@ window.addEventListener('scroll', () => {
 
 // Affichage des cartes cachées lors du clic sur le "+".
 
-const plus = document.querySelector('.afficher-plus img');
+const plusBtn = document.querySelector('.afficher-plus img');
 const carteCachee = document.querySelectorAll('.carte-cachee');
 
-plus.addEventListener('click', () => {
+plusBtn.addEventListener('click', () => {
 
       // console.log(carteCachee);
 
       for(i=0; i<carteCachee.length; i++){
             carteCachee[i].classList.toggle('carte-cachee');
-            plus.src ='./ressources/minus.svg';
+            
       }
+      minusToPlus(plusBtn);
 
+      
       // Changer le - en + après avoir cliqué une seconde fois dessus.
+      function minusToPlus(plusBtn){
+            if (plusBtn.src.includes('plus')){
+                  plusBtn.src = './ressources/minus.svg';
+            }
+            else {
+                  plusBtn.src='./ressources/plus.svg';
+            }
+      }
 
 })
 

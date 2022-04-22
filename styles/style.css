@@ -14,7 +14,7 @@
   padding: 15px;
   border-radius: 15px;
   color: #fff;
-  background: linear-gradient(45deg, #20212f, #E07A5F);
+  background: linear-gradient(45deg, #20212f, #F2CC8F);
 }
 
 .active {
@@ -96,7 +96,7 @@ nav li a:hover::after {
 }
 
 .lien-github:hover {
-  background: linear-gradient(45deg, #20212f, #F2CC8F);
+  background: linear-gradient(45deg, #20212f, #E07A5F);
 }
 
 .responsive-nav-btn {
@@ -368,6 +368,82 @@ nav li a:hover::after {
 
   .img-carte img {
     height: 200px;
+  }
+}
+.cta {
+  width: 100%;
+  min-height: 400px;
+  background-image: url("/ressources/layered-peaks-reverse.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta h2 {
+  color: #F4F1DE;
+  display: flex;
+}
+
+.cta h2 img {
+  width: 90px;
+  height: auto;
+}
+
+.container-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+
+.email {
+  color: #F4F1DE;
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  font-size: 28px;
+}
+
+.cta .lien-github {
+  display: flex;
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+@media screen and (max-width: 950px) {
+  .cta {
+    padding: 100px 0;
+  }
+
+  .container-cta {
+    flex-direction: column;
+  }
+
+  .cta .lien-github {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .email {
+    font-size: 24px;
+  }
+
+  .cta .lien-github {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cta h2 img {
+    width: 80px;
+  }
+
+  .email {
+    font-size: 18px;
+  }
+
+  .cta .lien-github {
+    font-size: 18px;
   }
 }
 
