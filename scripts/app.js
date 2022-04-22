@@ -35,13 +35,12 @@ btnNav.addEventListener('click', () => {
 // Navbar visible au scroll vers le haut
 
 const nav = document.querySelector('nav');
-let currentYPos = 0;
 let lastYpos = 0;
 
 window.addEventListener('scroll', () => {
-      currentYPos = document.documentElement.scrollTop;
+      let currentYPos = document.documentElement.scrollTop;
       // console.log(currentYPos - lastYpos);
-      if (document.documentElement.scrollTop > 70 && currentYPos - lastYpos < 0){
+      if (document.documentElement.scrollTop > 70 && currentYPos - lastYpos < 0){ //One ajoute la classe .active si on se trouve à plus de 70px du top et qu'on scroll vers le haut.
             nav.classList.add('active');  
 
       } else {
@@ -55,10 +54,24 @@ window.addEventListener('scroll', () => {
 })
 
 
+// Affichage des cartes cachées lors du clic sur le "+".
+
+const plus = document.querySelector('.afficher-plus img');
+const carteCachee = document.querySelectorAll('.carte-cachee');
+
+plus.addEventListener('click', () => {
+
+      // console.log(carteCachee);
+
+      for(i=0; i<carteCachee.length; i++){
+            carteCachee[i].classList.toggle('carte-cachee');
+            plus.src ='./ressources/minus.svg';
+      }
+
+      // Changer le - en + après avoir cliqué une seconde fois dessus.
+
+})
 
 
-// function activeOnScroll() {
-//       if (document.documentElement.scrollTop > 70) {
-//             nav.classList.toggle('active');
-//       }
-// }
+
+
