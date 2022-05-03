@@ -40,7 +40,7 @@ let lastYpos = 0;
 window.addEventListener('scroll', () => {
       let currentYPos = document.documentElement.scrollTop;
       // console.log(currentYPos - lastYpos);
-      if (document.documentElement.scrollTop > 70 && currentYPos - lastYpos < 0){ //One ajoute la classe .active si on se trouve à plus de 70px du top et qu'on scroll vers le haut.
+      if (document.documentElement.scrollTop > 70 && currentYPos - lastYpos < 0){ //On ajoute la classe .active si on se trouve à plus de 70px du top et qu'on scroll vers le haut.
             nav.classList.add('active');  
 
       } else {

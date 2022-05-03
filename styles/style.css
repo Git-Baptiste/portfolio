@@ -1,4 +1,4 @@
-.portfolio h2, .presentation, nav ul, .lien-github {
+.cv h2, .portfolio h2, .presentation, nav ul, .lien-github {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,21 +14,21 @@
   padding: 15px;
   border-radius: 15px;
   color: #fff;
-  background: linear-gradient(45deg, #20212f, #F2CC8F);
+  background: linear-gradient(45deg, #121315, #F2CC8F);
 }
 
 .active {
   position: fixed;
   z-index: 1000;
   background: #fff;
-  color: #20212f;
+  color: #121315;
   border-bottom: 1px solid #F4F1DE;
 }
 .active a {
-  color: #20212f;
+  color: #121315;
 }
 .active a::after {
-  background: #20212f;
+  background: #121315;
 }
 .active .lien-github {
   color: #F4F1DE;
@@ -96,7 +96,7 @@ nav li a:hover::after {
 }
 
 .lien-github:hover {
-  background: linear-gradient(45deg, #20212f, #E07A5F);
+  background: linear-gradient(45deg, #121315, #E07A5F);
 }
 
 .responsive-nav-btn {
@@ -123,7 +123,7 @@ nav li a:hover::after {
     position: absolute;
     top: -5px;
     background: #fff;
-    color: #20212f;
+    color: #121315;
   }
 
   nav ul {
@@ -148,12 +148,12 @@ nav li a:hover::after {
   }
 
   nav ul li a {
-    color: #20212f;
+    color: #121315;
   }
 
   nav li a::after {
     top: -20px;
-    background: #20212f;
+    background: #121315;
   }
 
   .lien-github {
@@ -285,6 +285,8 @@ nav li a:hover::after {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px 1px rgba(51, 51, 51, 0.7);
 }
 
 .container-pastilles {
@@ -303,6 +305,7 @@ nav li a:hover::after {
   border-radius: 9999px;
   font-size: 18px;
   font-weight: 300;
+  box-shadow: -1px -1px 5px -1px rgba(0, 0, 0, 0.7) inset;
 }
 
 .couleur-html {
@@ -315,6 +318,10 @@ nav li a:hover::after {
 
 .couleur-js {
   background: #DBA800;
+}
+
+.couleur-scss {
+  background: #bf4080;
 }
 
 .titre-projet {
@@ -343,7 +350,7 @@ nav li a:hover::after {
   height: 50px;
   width: 50px;
   border-style: none;
-  border: 4px solid #20212f;
+  border: 4px solid #121315;
   border-radius: 9999px;
   cursor: pointer;
 }
@@ -444,6 +451,92 @@ nav li a:hover::after {
 
   .cta .lien-github {
     font-size: 18px;
+  }
+}
+.container-cv {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 700px;
+  margin: 0 0 50px;
+  font-size: 18px;
+}
+
+.container-cv .date {
+  font-size: 22px;
+}
+
+.container-cv-gauche {
+  margin: 30px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-cv-gauche p {
+  display: flex;
+  justify-content: flex-end;
+  margin: 50px 0;
+}
+
+.container-cv-droit::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 100%;
+  border-radius: 5px;
+  background: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container-cv-droit {
+  margin: 90px 30px 30px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-cv-droit p {
+  margin: 50px 0;
+}
+
+.cv-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .container-cv {
+    display: none;
+  }
+
+  .cv-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cv-mobile ul li {
+    margin: 15px 0;
+    font-size: 18px;
+  }
+
+  .cv-mobile .date {
+    margin-top: 30px;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .ligne-cv::after {
+    content: "";
+    display: flex;
+    margin: 0 auto;
+    width: 100px;
+    height: 2px;
+    background: #121315;
+    margin-top: 30px;
   }
 }
 
