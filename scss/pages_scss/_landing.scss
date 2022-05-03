@@ -142,7 +142,7 @@ nav li a:hover::after {
 
 
 .presentation {
-      background-image: url(/ressources/layered-peaks.svg);
+      background-image: url(../ressources/layered-peaks.svg);
       background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
@@ -383,7 +383,7 @@ nav li a:hover::after {
 .cta {
       width: 100%;
       min-height: 400px;
-      background-image: url('/ressources/layered-peaks-reverse.svg');
+      background-image: url(../ressources/layered-peaks-reverse.svg);
       display: flex;
       flex-direction: column;
       justify-content: center;
