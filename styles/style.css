@@ -165,7 +165,7 @@ nav li a:hover::after {
   }
 }
 .presentation {
-  background-image: url(/ressources/layered-peaks.svg);
+  background-image: url(./ressources/layered-peaks.svg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
