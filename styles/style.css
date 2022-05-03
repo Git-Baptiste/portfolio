@@ -385,6 +385,7 @@ nav li a:hover::after {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 75px 0 150px;
 }
 
 .cta h2 {
